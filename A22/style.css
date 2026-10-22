@@ -1,0 +1,42 @@
+
+        .chart-container {
+            width: 500px;
+            height: 300px;
+            border: 2px solid #333; 
+            padding: 20px;
+            display: flex; 
+            align-items: flex-end;
+            justify-content: space-around;
+            border-radius: 8px;
+            background-color: #f9f9f9;  
+        }   
+
+        .bar {
+            width: 50px;
+            height: 0;
+            background-color: #3498db;
+            text-align: center;
+            color: white;
+            font-family: sans-serif;
+            font-size: 12px;
+            line-height: 24px;
+            border-radius: 4px 4px 0 0; 
+            overflow: hidden;
+
+            transition: height 0.8s ease-in-out;
+           
+          }
+
+          /* transição de altura */
+
+         
+
+          .chart-container:hover .bar  {
+            transition-delay: calc(var(--ordem) * 0.15s);
+                height: 250px;
+          }
+
+          
+
+
+    
