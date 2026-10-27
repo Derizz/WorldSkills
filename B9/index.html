@@ -1,25 +1,18 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>imagens 3d</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comparador de imagem</title>
+    <link rel="stylesheet" href="style.css">
+    
+
 </head>
-
 <body>
-    <div class="stage" id="stage">
-        <!-- Foto de fundo (Próxima foto) -->
-    <div class="background-photo" id="bgPhoto"></div>
-
-        <!-- Container das portas (Foto atual dividida) -->
-    <div class="doors-container">
-    <div class="door door-left" id="doorLeft"></div>
-    <div class="door door-right" id="doorRight"></div>
-    </div>
-    </div>
-
- <script src="script.js"></script>
-
+ <div class="container" style="--pos: 50%;">
+  <input type="range" min="0" max="100" value="50" class="slider" oninput="this.parentElement.style.setProperty('--pos', this.value + '%')">
+  <img src="before.jpg" alt="Before" class="img-before">
+  <img src="after.jpg" alt="After" class="img-after">
+</div>
 </body>
 </html>

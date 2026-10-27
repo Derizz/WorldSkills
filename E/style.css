@@ -1,0 +1,58 @@
+.stage {
+  width: 600px;
+  height: 400px;
+  position: relative;
+  perspective: 1000px;
+  overflow: hidden;
+  cursor: pointer;
+  transform-style: preserve-3d;
+}
+
+.background-photo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  z-index: 1;
+}
+
+.doors-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  display: flex;
+  transform-style: preserve-3d;
+}
+
+.door {
+  width: 50%;
+  height: 100%;
+  background-size: 600px 400px;
+  backface-visibility: hidden;
+  transition: transform 1s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.door-left {
+  background-position: left center;
+  transform-origin: left center;
+}
+
+.door-right {
+  background-position: right center;
+  transform-origin: right center;
+}
+
+/* Quando aberto */
+.stage.is-open .door-left {
+  transform: rotateY(-100deg);
+}
+
+.stage.is-open .door-right {
+  transform: rotateY(100deg);
+}
