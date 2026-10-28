@@ -6,10 +6,11 @@
 
 
 .container {
-    display: relative;
-    width: 100%;
-    max-width: 800px;
-    aspect-ratio: 16 / 9;
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    max-width: none;
+    aspect-ratio: auto;
     overflow: hidden;
     --pos: 50%;
 }
@@ -22,8 +23,9 @@
     height: 100%;
     object-fit: cover;
     user-select: none;
+    pointer-events: none;
 }
-*/
+
 .container img:last-of-type {
   z-index: 1;
 }
@@ -59,19 +61,23 @@
   pointer-events: none;
 }
 
-
 .container::after {
-  content: '';
-  position: absolute;
-  top: 50%;
-  left: var(--pos);
-  width: 40px;
-  height: 40px;
-  background-image: url('splitter.svg');
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-  transform: translate(-50%, -50%);
-  z-index: 6;
-  pointer-events: none;
+    content: '◄ ►'; 
+    font-size: 12px;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    left: var(--pos);
+    width: 40px;
+    height: 40px;
+    background-color: rgba(0, 0, 0, 0.7);
+    border: 2px solid #ffffff;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 6;
+    pointer-events: none;
+    letter-spacing: 2px; 
 }
