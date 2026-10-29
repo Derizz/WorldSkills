@@ -1,0 +1,203 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f6f9;
+    color: #333;
+    margin: 0;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Slideshow Container */
+#slideshowContainer {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 650px;
+    width: 100%;
+}
+
+.slide-view {
+    text-align: center;
+    width: 100%;
+}
+
+.slide-view img {
+    max-width: 100%;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 1px solid #e2e8f0;
+}
+
+.caption {
+    margin-top: 12px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #475569;
+}
+
+#fullscreenBtn {
+    margin-top: 15px;
+    background-color: #0f172a;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+#fullscreenBtn:hover {
+    background-color: #334155;
+}
+
+/* Input e DropZone */
+input[type="file"] {
+    padding: 10px;
+    background: #ffffff;
+    border: 2px solid #cbd5e1;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-bottom: 15px;
+}
+
+#dropZone {
+    width: 100%;
+    max-width: 600px;
+    border: 2px dashed #4f46e5;
+    background-color: #ffffff;
+    padding: 25px;
+    text-align: center;
+    border-radius: 10px;
+    color: #4f46e5;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+#sampleBtn {
+    background-color: #4f46e5;
+    color: white;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-bottom: 25px;
+}
+
+/* Galeria em Grelha (Grid) */
+#galleryList {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 15px;
+    width: 100%;
+    max-width: 700px;
+}
+
+#galleryList li {
+    background: #ffffff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    display: flex;
+    flex-direction: column;
+    cursor: grab;
+    transition: transform 0.2s;
+}
+
+#galleryList li:hover {
+    transform: translateY(-3px);
+}
+
+#galleryList img {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+}
+
+#galleryList span {
+    padding: 8px;
+    font-size: 13px;
+    color: #334155;
+    text-align: center;
+}
+
+/* Feedback Visual de Arrastar (Atividade 8) */
+#galleryList li.dragging {
+    opacity: 0.4;
+    background: #cbd5e1;
+}
+
+#galleryList li.drag-over-top {
+    border-top: 3px solid #4f46e5;
+}
+
+#galleryList li.drag-over-bottom {
+    border-bottom: 3px solid #4f46e5;
+}
+
+/* Paleta de Comandos (Atividade 9) */
+.palette-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 15vh;
+    z-index: 1000;
+}
+
+.palette-box {
+    background: #ffffff;
+    width: 100%;
+    max-width: 500px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+#paletteInput {
+    width: 100%;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    border-bottom: 1px solid #e2e8f0;
+    outline: none;
+    box-sizing: border-box;
+}
+
+#paletteList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    max-height: 250px;
+    overflow-y: auto;
+}
+
+#paletteList li {
+    padding: 12px 16px;
+    font-size: 14px;
+    color: #334155;
+    cursor: pointer;
+    border-bottom: 1px solid #f1f5f9;
+}
+
+#paletteList li.selected {
+    background-color: #eef2ff;
+    color: #4f46e5;
+    font-weight: 600;
+}

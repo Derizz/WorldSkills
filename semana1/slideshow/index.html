@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto Avaliativo - Slideshow e Galeria</title>
+    
+    <!-- Importação dos ficheiros CSS  -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="theme-a.css">
+    <link rel="stylesheet" href="theme-b.css">
+</head>
+<body>
+
+    <!-- Visualizador Principal do Slideshow -->
+    <div id="slideshowContainer" class="theme-a">
+        <div class="slide-view">
+            <img id="currentSlideImg" src="" alt="Slide atual">
+            <div id="currentSlideCaption" class="caption">Nenhuma foto carregada</div>
+        </div>
+        <button id="fullscreenBtn">Tela Cheia</button>
+    </div>
+
+    <hr style="width: 100%; margin: 30px 0;">
+
+    <!-- Seção de Gestão e Galeria de Fotos -->
+    <input type="file" id="fileInput" multiple accept="image/*">
+    
+    <div id="dropZone">
+        Arraste e solte imagens aqui ou clique para selecionar arquivos.
+    </div>
+
+    <button id="sampleBtn">Carregar fotos de amostra</button>
+    
+    <ul id="galleryList"></ul>
+
+    <!-- Overlay da Barra de Comandos / Paleta -->
+    <div id="commandPalette" class="palette-overlay" style="display: none;">
+        <div class="palette-box">
+            <input type="text" id="paletteInput" placeholder="Digite um comando ou pesquise...">
+            <ul id="paletteList"></ul>
+        </div>
+    </div>
+
+    <!-- Script Principal Unificado -->
+    <script src="script.js"></script>
+</body>
+</html>

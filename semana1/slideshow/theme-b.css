@@ -1,0 +1,19 @@
+@keyframes slideInLeft {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.theme-b .slide-view img {
+    animation: slideInLeft 0.6s ease-out forwards;
+}
+
+.theme-b .slide-view .caption {
+    animation: slideInLeft 0.6s ease-out 0.3s forwards; /* Legenda começa 300ms depois */
+    opacity: 0;
+}
