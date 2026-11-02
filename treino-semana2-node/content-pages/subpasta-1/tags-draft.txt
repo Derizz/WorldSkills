@@ -1,0 +1,6 @@
+---
+title: Teste de Tags e Draft
+tags: museu,  cultura ,arte
+draft: sim
+---
+Corpo do teste de tags.

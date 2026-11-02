@@ -1,0 +1,4 @@
+---
+title: Apenas Título
+---
+Este ficheiro só tem o título definido no front-matter.
